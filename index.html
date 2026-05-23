@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AVI Films</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h2>AVI FILMS</h2>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#films">Films</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>AVI</h1>
+        <p>Atmospheric films exploring isolation, loops, silence, and psychological tension.</p>
+        <a href="#films" class="hero-button">View Films</a>
+    </section>
+
+    <section class="films" id="films">
+        <h2>Films</h2>
+
+        <div class="film-row">
+            <div class="film-card" onclick="openFilm('floor')">
+                <img src="floor-poster.jpeg" alt="FL∞R poster">
+                <div class="film-card-text">
+                    <h3>FL∞R</h3>
+                    <p>Coming Soon</p>
+                </div>
+            </div>
+
+            <div class="film-card" onclick="openFilm('upcoming')">
+                <div class="empty-card">
+                    <h3>Upcoming Projects</h3>
+                    <p>In Development</p>
+                </div>
+            </div>
+
+            <div class="film-card" onclick="openFilm('archive')">
+                <div class="empty-card">
+                    <h3>Archive</h3>
+                    <p>Early Work</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About</h2>
+        <p>
+            I started creating movies since i was 11 i made 4 movies and 3 episodes of a show and im working a new film called fl∞r.
+        </p>
+    </section>
+
+    <footer>
+        <p>Directed By AVI</p>
+    </footer>
+
+    <div class="movie-popup" id="moviePopup">
+        <div class="popup-box">
+            <button class="close-btn" onclick="closeFilm()">X</button>
+
+            <img id="popupPoster" src="" alt="Movie poster">
+
+            <div class="popup-info">
+                <p id="popupStatus" class="status"></p>
+                <h2 id="popupTitle"></h2>
+                <h3 id="popupTagline"></h3>
+                <p id="popupDescription"></p>
+
+                <div class="movie-details">
+                    <p><span>Release:</span> <span id="popupRelease"></span></p>
+                    <p><span>Genre:</span> <span id="popupGenre"></span></p>
+                    <p><span>Director:</span> <span id="popupDirector"></span></p>
+                    <p><span>Cast:</span> <span id="popupCast"></span></p>
+                    <p><span>Status:</span> <span id="popupFilmStatus"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
